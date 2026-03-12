@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THAI COUNTER — Midnight Anthology</title>
-    <meta name="description" content="Immersive Thai Street Food experience. Bangkok heat, luxury editorial design.">
-    <!-- Google Fonts: Playfair Display SC & Karla -->
+    <meta name="description" content="Tasteful Thai Street Food. Engineered motion, bold condensed typography, and organic flow.">
+    <!-- Fonts: Big Shoulders Display, Noto Sans Thai, Karla, Playfair -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Karla:wght@200..800&family=Noto+Sans+Thai:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/main.css">
 </head>
 <body>
@@ -16,12 +16,15 @@
         <div class="noise-overlay"></div>
         <div class="custom-cursor"></div>
         
+        <div class="bg-text-stroke" style="top: 10vh; left: -5vw;">THAI</div>
+        <div class="bg-text-stroke" style="top: 45vh; right: -5vw;">2026</div>
+        
         <nav class="main-nav">
             <div class="nav-logo">THAI COUNTER</div>
             <div class="nav-links">
-                <a href="#menu" class="nav-item">THE MENU</a>
-                <a href="#about" class="nav-item">AUTHENTICITY</a>
-                <a href="#reservations" class="nav-item">RESERVATIONS</a>
+                <a href="#about" class="nav-item">Authenticity</a>
+                <a href="#menu" class="nav-item">The Menu</a>
+                <a href="#reservations" class="nav-item">Book a Table</a>
             </div>
         </nav>
 
@@ -29,15 +32,16 @@
             <section class="hero-section" id="hero">
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        <span class="line">BANGKOK</span>
-                        <span class="line outline">MIDNIGHT</span>
-                        <span class="line">HEAT</span>
+                        <div class="mask-container"><span class="line mask-child">BANGKOK</span></div>
+                        <div class="mask-container"><span class="line magenta mask-child">STREET</span></div>
+                        <div class="mask-container"><span class="line mask-child">LUXURY</span></div>
                     </h1>
-                    <p class="hero-tagline">Raw energy. Luxury restraint. The street is served.</p>
+                    <p class="hero-tagline">Exquisite aromatics. Fluid motion. <br>Design Engineered.</p>
                 </div>
                 <div class="hero-bg">
-                    <div class="neon-glow glow-1"></div>
-                    <div class="neon-glow glow-2"></div>
+                    <div class="organic-shape shape-1" data-speed="0.08"></div>
+                    <div class="organic-shape shape-2" data-speed="0.15"></div>
+                    <div class="floral-flourish" data-speed="0.03"></div>
                 </div>
             </section>
 
@@ -68,6 +72,22 @@
                         <p class="dish-desc">High-shine tamarind glaze. Sticky, sweet, brutal heat. Melted luxury.</p>
                         <div class="dish-img-placeholder"></div>
                     </div>
+                </div>
+            </section>
+
+            <section class="authenticity-section" id="about">
+                <div class="bg-text-stroke" style="bottom: 0; left: 10vw; opacity: 0.3;">STREET</div>
+                <div class="auth-content">
+                    <div class="mask-container">
+                        <h2 class="auth-title mask-child">CRAFTED <span class="serif-italic magenta">without</span> COMPROMISE</h2>
+                    </div>
+                    <div class="auth-grid">
+                        <p class="auth-text">Every ingredient is a deliberate choice. Every flame is an intentional act. We do not mimic tradition; we refine its essence into a singular, modern experience.</p>
+                        <a href="#menu" class="btn-switch"><span>EXPLORE MENU</span></a>
+                    </div>
+                </div>
+                <div class="auth-bg">
+                    <div class="organic-shape shape-3" data-speed="0.12"></div>
                 </div>
             </section>
 
