@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Karla:wght@200..800&family=Noto+Sans+Thai:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/floating-assets.css">
 </head>
 <body>
     <div id="app">
@@ -42,10 +43,13 @@
                     <div class="organic-shape shape-1" data-speed="0.08"></div>
                     <div class="organic-shape shape-2" data-speed="0.15"></div>
                     <div class="floral-flourish" data-speed="0.03"></div>
+                    <div class="floating-ingredient asset-chili" style="top: 70%; left: 15%;" data-speed="0.12"></div>
                 </div>
+                <div class="liquid-divider liquid-down"></div>
             </section>
 
             <section class="horizontal-scroll-section" id="menu">
+                <div class="grid-texture"></div>
                 <div class="horizontal-track">
                     <div class="menu-intro horizontal-item">
                         <h2 class="section-title">THE<br>SPECTRUM</h2>
@@ -53,37 +57,49 @@
                     </div>
                     
                     <div class="menu-card horizontal-item">
-                        <div class="dish-number">01</div>
-                        <h3 class="dish-name">TOM YUM<br>OBSIDIAN</h3>
-                        <p class="dish-desc">Vibrant lemongrass fire filtered through charred aromatics. Dark, dangerous depth.</p>
+                        <span class="dish-number">01</span>
+                         <div class="menu-text-content">
+                            <h3 class="dish-name">TOM YUM<br>OBSIDIAN</h3>
+                            <p class="dish-desc">Vibrant lemongrass fire filtered through charred aromatics. Dark, dangerous depth.</p>
+                        </div>
                         <div class="dish-img-placeholder"></div>
                     </div>
 
                     <div class="menu-card horizontal-item">
-                        <div class="dish-number">02</div>
-                        <h3 class="dish-name">STARK<br>PAD THAI</h3>
-                        <p class="dish-desc">The classic, stripped bare. Smoky wok-breath and sharp acidity. No frills, all fight.</p>
+                        <span class="dish-number">02</span>
+                        <div class="menu-text-content">
+                            <h3 class="dish-name">KHAO SOI<br>KINETIC</h3>
+                            <p class="dish-desc">Golden curry velocity. Silken coconut milk colliding with high-frequency spice.</p>
+                        </div>
                         <div class="dish-img-placeholder"></div>
                     </div>
 
                     <div class="menu-card horizontal-item">
-                        <div class="dish-number">03</div>
-                        <h3 class="dish-name">CHILI<br>GLOSS RIBS</h3>
-                        <p class="dish-desc">High-shine tamarind glaze. Sticky, sweet, brutal heat. Melted luxury.</p>
+                        <span class="dish-number">03</span>
+                        <div class="menu-text-content">
+                            <h3 class="dish-name">PAD THAI<br>PRIMAL</h3>
+                            <p class="dish-desc">Wok-fired energy. The raw frequency of street tradition, distilled into one bite.</p>
+                        </div>
                         <div class="dish-img-placeholder"></div>
                     </div>
                 </div>
             </section>
 
             <section class="authenticity-section" id="about">
+                <div class="grid-texture"></div>
+                <div class="liquid-divider liquid-up"></div>
                 <div class="bg-text-stroke" style="bottom: 0; left: 10vw; opacity: 0.3;">STREET</div>
                 <div class="auth-content">
+                    <div class="handwritten-note" style="top: -2rem; right: 0; transform: rotate(5deg);">"Family Recipe"</div>
                     <div class="mask-container">
                         <h2 class="auth-title mask-child">CRAFTED <span class="serif-italic magenta">without</span> COMPROMISE</h2>
                     </div>
                     <div class="auth-grid">
                         <p class="auth-text">Every ingredient is a deliberate choice. Every flame is an intentional act. We do not mimic tradition; we refine its essence into a singular, modern experience.</p>
-                        <a href="#menu" class="btn-switch"><span>EXPLORE MENU</span></a>
+                        <a href="#menu" class="btn-circular">
+                            <span class="btn-text">EXPLORE MENU</span>
+                            <div class="btn-fill"></div>
+                        </a>
                     </div>
                 </div>
                 <div class="auth-bg">
@@ -101,9 +117,14 @@
                             <input type="date" required>
                             <input type="number" placeholder="GUESTS" min="1" max="10" required>
                         </div>
-                        <button type="submit" class="submit-btn">CLAIM SPACE</button>
+                        <button type="submit" class="btn-circular btn-light">
+                            <span class="btn-text">CLAIM SPACE</span>
+                            <div class="btn-fill"></div>
+                        </button>
                     </form>
+                    <div class="floating-ingredient asset-basil" style="bottom: 10%; left: 5%;" data-speed="0.15"></div>
                 </div>
+                <div class="bg-text-stroke" style="bottom: -10vh; right: 0; -webkit-text-stroke-color: rgba(255,255,255,0.1);">ORDER</div>
             </section>
         </main>
         

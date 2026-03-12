@@ -34,23 +34,29 @@ window.addEventListener('mousemove', (e) => {
     });
 });
 
-// Magnetic & Viscous Navigation + Switch Buttons
-const interactables = document.querySelectorAll('.nav-item, .nav-logo, .btn-switch, .submit-btn');
+// Magnetic & Viscous Navigation + Circular CTAs
+const interactables = document.querySelectorAll('.nav-item, .nav-logo, .btn-circular');
 interactables.forEach(item => {
     item.addEventListener('mousemove', (e) => {
         const rect = item.getBoundingClientRect();
-        const x = (e.clientX - rect.left - rect.width / 2) * 0.3;
-        const y = (e.clientY - rect.top - rect.height / 2) * 0.3;
+        const x = (e.clientX - rect.left - rect.width / 2) * 0.4;
+        const y = (e.clientY - rect.top - rect.height / 2) * 0.4;
         
         gsap.to(item, {
             x: x,
             y: y,
-            duration: 0.4,
-            ease: 'power2.out'
+            duration: 0.6,
+            ease: 'power3.out'
         });
         
-        if (item.classList.contains('btn-switch') || item.classList.contains('submit-btn')) {
-            gsap.to(cursor, { scale: 0.5, backgroundColor: '#fff', mixBlendMode: 'difference' });
+        if (item.classList.contains('btn-circular')) {
+            gsap.to(cursor, { 
+                width: 120, 
+                height: 120, 
+                backgroundColor: 'transparent', 
+                border: '1px solid #fff',
+                mixBlendMode: 'difference' 
+            });
         }
     });
     
@@ -58,10 +64,16 @@ interactables.forEach(item => {
         gsap.to(item, {
             x: 0,
             y: 0,
-            duration: 1,
-            ease: 'elastic.out(1, 0.4)'
+            duration: 1.2,
+            ease: 'elastic.out(1.1, 0.4)'
         });
-        gsap.to(cursor, { scale: 1, backgroundColor: '', mixBlendMode: 'normal' });
+        gsap.to(cursor, { 
+            width: 20, 
+            height: 20, 
+            backgroundColor: '', 
+            border: 'none',
+            mixBlendMode: 'difference' 
+        });
     });
 });
 
@@ -83,13 +95,14 @@ const parallaxElements = document.querySelectorAll('[data-speed]');
 parallaxElements.forEach(el => {
     const speed = parseFloat(el.getAttribute('data-speed'));
     gsap.to(el, {
-        y: -400 * speed,
+        y: () => -500 * speed,
+        rotation: () => el.classList.contains('floating-ingredient') ? 15 : 0,
         ease: 'none',
         scrollTrigger: {
             trigger: el,
             start: 'top bottom',
             end: 'bottom top',
-            scrub: true
+            scrub: 1.2
         }
     });
 });
@@ -147,16 +160,17 @@ if (window.innerWidth > 768) {
     // Menu Item Emergence
     const menuCards = document.querySelectorAll('.menu-card');
     menuCards.forEach(card => {
-        gsap.from(card.querySelectorAll('.dish-number, .dish-name, .dish-desc'), {
-            y: 80,
+        const elements = card.querySelectorAll('.dish-number, .dish-name, .dish-desc, .dish-img-placeholder');
+        gsap.from(elements, {
+            y: 50,
             opacity: 0,
-            stagger: 0.2,
-            duration: 1.5,
-            ease: 'expo.out',
+            stagger: 0.1,
+            duration: 1.2,
+            ease: 'power3.out',
             scrollTrigger: {
                 trigger: card,
                 containerAnimation: horizontalScroll,
-                start: 'left center+=25%',
+                start: 'left center+=40%',
                 toggleActions: 'play none none reverse'
             }
         });
